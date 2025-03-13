@@ -21,11 +21,12 @@ Buon divertimento e confermate lettura come al solito
 const express = require('express');
 const app = express();
 const port = 3000;
-const postRouter = require('./routers/posts.js')
-const posts = require('./immagini_e_posts/posts.js')
+const postRouter = require("./routers/posts.js");
+
+
 
 // Server star listent port 300
-app.listen(port, (req, res) => {
+app.listen(port,() => {
     console.log(`Serve in ascolto su http://localhost:${port}`);
     
 })
