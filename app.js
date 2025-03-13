@@ -22,6 +22,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const postRouter = require('./routers/posts.js')
+const posts = require('./immagini_e_posts/posts.js')
 
 // Server star listent port 300
 app.listen(port, (req, res) => {
