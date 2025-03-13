@@ -21,12 +21,20 @@ Buon divertimento e confermate lettura come al solito
 const express = require('express');
 const app = express();
 const port = 3000;
+const postRouter = require('./routers/posts.js')
 
+// Server star listent port 300
 app.listen(port, (req, res) => {
     console.log(`Serve in ascolto su http://localhost:${port}`);
     
 })
 
+
+//  Define home route
 app.get('/',(req, res) =>{
     res.send("Welcome to our server")
 })
+
+
+// Link to posts.js
+app.use('/api/v1/posts', postRouter);
